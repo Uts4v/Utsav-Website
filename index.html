@@ -626,6 +626,11 @@
             </div>
         </div>
     </section>
+    <div class="cta-buttons">
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <a href="#" class="btn btn-secondary" onclick="downloadResume(event)">Download Resume</a>
+</div>
 
     <!-- About Section -->
     <section id="about">
@@ -934,6 +939,12 @@
                     <a href="https://www.linkedin.com/in/utsav-stha-b378b5259/" class="contact-btn" target="_blank">LinkedIn</a>
                     <a href="https://www.utsavshrestha101.com.np" class="contact-btn" target="_blank">Portfolio</a>
                 </div>
+                <div class="contact-links">
+    <a href="mailto:utsavstha033@gmail.com" class="contact-btn">Email Me</a>
+    <a href="#" class="contact-btn" onclick="downloadResume(event)">Download Resume</a>
+    <a href="https://github.com/Uts4v" class="contact-btn" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/utsav-stha-b378b5259/" class="contact-btn" target="_blank">LinkedIn</a>
+</div>
             </div>
         </div>
     </section>
@@ -1109,6 +1120,16 @@
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
         });
+        // Resume Download Function
+function downloadResume(event) {
+    event.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'Utsav_resume.pdf';
+    link.download = 'Utsav_resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
     </script>
 </body>
 </html>
